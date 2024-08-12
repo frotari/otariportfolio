@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="welcome-screen" class="welcome-screen">
+        <h1>My Portfolio</h1>
+    </div>
+
+    <div id="main-content" class="main-content hidden">
+        <div class="sidebar left"></div>
+        <div class="sidebar right"></div>
+        <header>
+            <h2>Welcome to My Portfolio</h2>
+        </header>
+        <div class="wrapper">
+            <main>
+                <section class="intro">
+                    <h2>This is a collection of my projects and achievements.</h2>
+                    <div class="bio">
+                        <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                        <div class="bio-content">
+                            <p>Hello! I'm Otari Berdzenishvili, a passionate developer with experience in multiple programming languages. I love creating and working on innovative projects. In my spare time, I enjoy video editing and listening to cozy music. Feel free to explore my projects and connect with me!</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="separator"></div>
+                <section class="projects">
+                    <h2>Projects</h2>
+                    <div class="project-grid">
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 1</h3>
+                                <p>Details about project 1.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 2</h3>
+                                <p>Details about project 2.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 3</h3>
+                                <p>Details about project 3.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 4</h3>
+                                <p>Details about project 4.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 5</h3>
+                                <p>Details about project 5.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 6</h3>
+                                <p>Details about project 6.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 7</h3>
+                                <p>Details about project 7.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 8</h3>
+                                <p>Details about project 8.</p>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-content">
+                                <h3>Project 9</h3>
+                                <p>Details about project 9.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <p>Contact me on <a href="#" class="highlighted-link">Gmail</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        function createRandomCircle(sidebarClass) {
+            const sidebar = document.querySelector(sidebarClass);
+            const circle = document.createElement('div');
+            const size = Math.random() * 80 + 20;
+
+            circle.style.width = `${size}px`;
+            circle.style.height = `${size}px`;
+            circle.style.borderRadius = '50%';
+            circle.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            circle.style.position = 'absolute';
+            circle.style.top = `${Math.random() * (sidebar.offsetHeight - size)}px`;
+            circle.style.left = `${Math.random() * (sidebar.offsetWidth - size)}px`;
+            circle.style.opacity = '1';
+            circle.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            sidebar.appendChild(circle);
+
+            setTimeout(() => {
+                circle.style.opacity = '0';
+                circle.style.transform = `scale(${Math.random() * 1.5 + 0.5}) translateY(${Math.random() * 50 - 25}px)`;
+            }, 50);
+
+            setTimeout(() => {
+                sidebar.removeChild(circle);
+            }, 1050);
+        }
+
+        function startCircleAnimation(sidebarClass) {
+            setInterval(() => {
+                createRandomCircle(sidebarClass);
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            startCircleAnimation('.sidebar.left');
+            startCircleAnimation('.sidebar.right');
+        });
+    </script>
+</body>
+</html>
