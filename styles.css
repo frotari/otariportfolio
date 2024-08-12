@@ -195,8 +195,8 @@ footer {
   }
 
   .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 150px; /* Increased size for mobile */
+    height: 150px; /* Increased size for mobile */
     margin-bottom: 10px;
   }
 
