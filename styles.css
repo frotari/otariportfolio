@@ -226,9 +226,9 @@ footer {
   }
 
   footer {
-    position: relative;
+    position: static;
     padding: 20px;
-    text-align: center;
+    text-align: match-parent;
   }
 }
 
