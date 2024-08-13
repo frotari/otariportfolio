@@ -229,5 +229,12 @@ footer {
     position: static;
     padding: 20px;
     text-align: center;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  footer p {
+    margin: 0;
+    padding-left: 10px;
   }
 }
