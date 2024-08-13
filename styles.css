@@ -227,7 +227,7 @@ footer {
 
   footer {
     position: static;
-    padding: 0px;
+    padding: 20px;
     text-align: center;
   }
 }
