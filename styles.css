@@ -226,9 +226,8 @@ footer {
   }
 
   footer {
-    padding-left: 10px;
     position: static;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
   }
 }
