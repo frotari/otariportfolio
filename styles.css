@@ -178,7 +178,18 @@ footer {
   padding-left: 120px; 
   padding-right: 120px; 
 }
-/* Media Queries for Mobile Devices */
+
+.highlighted-link {
+  color: #E1306C; 
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.highlighted-link:hover {
+  text-decoration: underline;
+}
+
+
 @media screen and (max-width: 768px) {
   .sidebar {
     display: none;
