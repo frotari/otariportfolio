@@ -226,15 +226,8 @@ footer {
   }
 
   footer {
-    position: static;
+    position: relative;
     padding: 20px;
-    text-align: match-parent;
+    text-align: center;
   }
-}
-
-footer p {
-  text-align: center; 
-  margin: 0;
-  padding: 10px 0;
-  font-size: 16px; 
 }
